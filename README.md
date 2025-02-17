@@ -18,22 +18,47 @@ yarn add firebase-error-handler
 
 ## Usage
 
-### Default Import
+### CommonJS (`require`)
+
 ```javascript
-const fireerror = require("firebase-error-handler");
+const parseFirebaseError = require("firebase-error-handler");
 
 // Using error object
-console.log(fireerror({ code: "auth/wrong-password" }));
+console.log(parseFirebaseError({ code: "auth/wrong-password" }));
 // Output: "Incorrect password. Please try again."
 
 // Using error code directly
-console.log(fireerror("auth/email-already-in-use"));
+console.log(parseFirebaseError("auth/email-already-in-use"));
 // Output: "This email is already in use. Try logging in instead."
 ```
 
-### Named Import (Alternative)
+### ES Module (`import`)
+
+```javascript
+import parseFirebaseError from "firebase-error-handler";
+
+// Using error object
+console.log(parseFirebaseError({ code: "auth/wrong-password" }));
+// Output: "Incorrect password. Please try again."
+
+// Using error code directly
+console.log(parseFirebaseError("auth/email-already-in-use"));
+// Output: "This email is already in use. Try logging in instead."
+```
+
+### CommonJS (Named Import via `require`)
+
 ```javascript
 const { getFirebaseErrorMessage } = require("firebase-error-handler");
+
+console.log(getFirebaseErrorMessage({ code: "auth/email-already-in-use" }));
+// Output: "This email is already in use. Try logging in instead."
+```
+
+### ES Module (Named Import via `import`)
+
+```javascript
+import { getFirebaseErrorMessage } from "firebase-error-handler";
 
 console.log(getFirebaseErrorMessage({ code: "auth/email-already-in-use" }));
 // Output: "This email is already in use. Try logging in instead."

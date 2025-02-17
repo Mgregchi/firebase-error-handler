@@ -1,4 +1,4 @@
-const firebaseErrorHandler = (error) => {
+const parseFirebaseError = (error) => {
   const errorCode = typeof error === "string" ? error : error?.code;
 
   const errorMessages =
@@ -70,5 +70,5 @@ const firebaseErrorHandler = (error) => {
 
 // module.exports = fireerror;
 // module.exports.fireerror = fireerror;
-export { firebaseErrorHandler as getFirebaseErrorMessage };
-export default firebaseErrorHandler;
+export { parseFirebaseError as getFirebaseErrorMessage };
+export default parseFirebaseError;
