@@ -1,0 +1,24 @@
+{
+  "name": "firebase-error-handler",
+  "version": "1.0.6",
+  "description": "A simple package to decode Firebase error codes into readable messages",
+  "main": "index.js",
+  "scripts": {
+    "test": "node /tests/index.js"
+  },
+  "keywords": [
+    "firebase",
+    "error",
+    "handler",
+    "authentication",
+    "firebase-error-handler",
+    "fireerror"
+  ],
+  "author": "Mgregchi",
+  "license": "MIT",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    "default": "./index.js"
+  }
+}
