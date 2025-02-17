@@ -1,6 +1,6 @@
 {
   "name": "firebase-error-handler",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple package to decode Firebase error codes into readable messages",
   "main": "index.js",
   "scripts": {
